@@ -4,7 +4,8 @@ function App() {
 }
 export default App;
 const txmd = `
-# 自己紹介  
+# くそ～まだ作れてないよ  
   
-とりあえずスクリプト動作テスト
+近日作成予定。  
+
 `;
