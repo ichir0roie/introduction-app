@@ -26,7 +26,7 @@ const txmd = `
 という理由で、色々と改造をはじめた。  
 そのせいでポートフォリオの作成が遅れそうだ。  
   
-[このサイトのソース](https://github.com/ichir0roie/introduction-app)  
+[このサイトのソース]()  
   
 ## 結局どんな実装をしたか  
   
