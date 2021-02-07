@@ -2,16 +2,8 @@ import React, { Suspense, lazy } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // python mdLinks auto generator start
-import AndroidApps from "./mdForJs/AndroidApps";
-import Github from "./mdForJs/Github";
-import Introduction from "./mdForJs/Introduction";
-import PageInfo from "./mdForJs/PageInfo";
-var mdPages = [
-["AndroidApps", <AndroidApps />],
-["Github", <Github />],
-["Introduction", <Introduction />],
-["PageInfo", <PageInfo />],
-];
+import 自己紹介 from "./mdForJs/自己紹介";
+var mdPages = [["自己紹介", <自己紹介 />]];
 // python mdLinks auto generator end
 
 function elemLi(page) {
