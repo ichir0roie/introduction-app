@@ -24,9 +24,3 @@ function App(props) {
 }
 
 export default App;
-var mdPages = [
-["AndroidApps", "public/mdFiles\AndroidApps.md"],
-["Github", "public/mdFiles\Github.md"],
-["Introduction", "public/mdFiles\Introduction.md"],
-["PageInfo", "public/mdFiles\PageInfo.md"],
-];

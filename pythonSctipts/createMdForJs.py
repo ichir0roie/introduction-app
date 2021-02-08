@@ -2,13 +2,16 @@
 
 import glob
 import os
+import shutil
 
 
 print(os.getcwd())
 
 FolderPath = "public/"
-ProjectPutPath = "http://ichir0roie.com/introduction/"
-ProjectPutPath = "public/"
+ProjectPutPath = "build/"
+
+if not os.path.exists(ProjectPutPath+"/mdFiles"):
+    os.mkdir(ProjectPutPath+"/mdFiles")
 
 targetFile = "src/index.js"
 
@@ -25,10 +28,15 @@ tmpTxtFin = '];\n'
 outTmpTxt2 = tmpTxtVal
 
 for path in rowFiles:
+
     savePath = path.replace(FolderPath, ProjectPutPath).replace("\\", "/")
+    url = savePath.replace(ProjectPutPath, "")
+
+    shutil.copy2(path, savePath)
+
     saveFileName = path.split("\\")[-1].replace(" ", "")
     title = saveFileName.replace(".md", "")
-    outTmpTxt2 += tmpTxtAry.replace("{0}", title).replace("{1}", savePath)
+    outTmpTxt2 += tmpTxtAry.replace("{0}", title).replace("{1}", url)
 
 
 outTmpTxt2 += tmpTxtFin
