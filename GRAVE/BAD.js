@@ -22,3 +22,11 @@ function load(url) {
 
 	return returnText;
 }
+
+fetch(url).then(function (response) {
+	response.text().then(function (text) {
+		returnText = text;
+		console.log(returnText);
+		console.log(response.status);
+	});
+});
