@@ -35,6 +35,20 @@ for (var i = 0; i < mdPages.length; i++) {
 	elemRts.push(elemRt(mdPages[i]));
 }
 
+function load(url) {
+	var returnText = "";
+
+	fetch(url).then(function (response) {
+		response.text().then(function (text) {
+			returnText = text;
+		});
+	});
+
+	return returnText;
+}
+
+var testText = load("http://ichir0roie.com/introduction/index.html");
+
 function App() {
 	return (
 		<div>
