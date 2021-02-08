@@ -7,7 +7,10 @@ function App(props) {
 			<header>
 				<div class="container text-center">
 					<div class="fh5co-navbar-brand">
-						<a className="fh5co-logo" href="/">
+						<a
+							className="fh5co-logo"
+							href="http://ichir0roie.com/introduction/"
+						>
 							Ichir0roie
 						</a>
 					</div>

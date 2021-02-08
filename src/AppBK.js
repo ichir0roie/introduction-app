@@ -7,10 +7,10 @@ import App from "./App";
 
 // python mdLinks auto generator start
 var mdPages = [
-["AndroidApps", "build/mdFiles/AndroidApps.md"],
-["Github", "build/mdFiles/Github.md"],
-["Introduction", "build/mdFiles/Introduction.md"],
-["PageInfo", "build/mdFiles/PageInfo.md"],
+	["AndroidApps", "mdFiles/AndroidApps.md"],
+	["Github", "mdFiles/Github.md"],
+	["Introduction", "mdFiles/Introduction.md"],
+	["PageInfo", "mdFiles/PageInfo.md"],
 ];
 // python mdLinks auto generator end
 
@@ -18,7 +18,7 @@ var ElemLis = mdPages.map((page) => (
 	<button onClick={() => feachMd(page[1])}>{page[0]}</button>
 ));
 
-var mdText = "";
+var mdText = "# ムダにReactで作った自己紹介ページ";
 function feachMd(url) {
 	fetch(url).then(function (response) {
 		response.text().then(function (text) {
