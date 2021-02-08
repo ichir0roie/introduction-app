@@ -6,17 +6,11 @@ import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 
 // python mdLinks auto generator start
-
-var testUrl = "http://localhost:3000/mdFiles/PageInfo.md";
-var testUrl1 = "http://ichir0roie.com/introduction/mdFiles/PageInfo.md";
-var testUrl2 = "http://localhost:3000/mdFiles/PageInfo.md2";
-var testUrl3 = "http://localhost:3000/mdFiles/PageInfo.md3";
-
 var mdPages = [
-	["AndroidApps", testUrl],
-	["Github", testUrl1],
-	["Introduction", testUrl2],
-	["PageInfo", testUrl3],
+["AndroidApps", "public/mdFiles/AndroidApps.md"],
+["Github", "public/mdFiles/Github.md"],
+["Introduction", "public/mdFiles/Introduction.md"],
+["PageInfo", "public/mdFiles/PageInfo.md"],
 ];
 // python mdLinks auto generator end
 

@@ -5,53 +5,41 @@ import os
 
 
 print(os.getcwd())
-with open("pythonSctipts/template.txt", "r", encoding="utf-8")as f:
-    temlate = f.read()
 
-print(os.getcwd())
+FolderPath = "public/"
+ProjectPutPath = "http://ichir0roie.com/introduction/"
+ProjectPutPath = "public/"
 
-rowFiles = glob.glob("mdFiles/*.md")
+targetFile = "src/index.js"
+
+rowFiles = glob.glob(FolderPath+"mdFiles/*.md")
 print(rowFiles)
 
-print("++++++++++++++++")
 
-existFiles = glob.glob("src/mdForJs/*.js")
-print(existFiles)
-
-savePath = "src/mdForJs/"
-
-outTmpTxt1 = ""
 outTmpTxt2 = ""
 
-tmpTxtImprt = 'import {0} from "./mdForJs/{0}";\n'
 tmpTxtVal = 'var mdPages = [\n'
-tmpTxtAry = '["{0}", <{0} />],\n'
+tmpTxtAry = '["{0}", "{1}"],\n'
 tmpTxtFin = '];\n'
 
 outTmpTxt2 = tmpTxtVal
 
 for path in rowFiles:
-    with open(path, "r", encoding="utf-8")as f:
-        mdText = f.read()
-    mdText = mdText.replace("\n", "  \n")
-    replcdTxt = temlate.replace("printThis", mdText)
+    savePath = path.replace(FolderPath, ProjectPutPath).replace("\\", "/")
     saveFileName = path.split("\\")[-1].replace(" ", "")
     title = saveFileName.replace(".md", "")
-    with open(savePath+saveFileName.replace(".md", ".js"), "w", encoding="utf-8")as f:
-        f.write(replcdTxt)
+    outTmpTxt2 += tmpTxtAry.replace("{0}", title).replace("{1}", savePath)
 
-    outTmpTxt1 += tmpTxtImprt.replace("{0}", title)
-    outTmpTxt2 += tmpTxtAry.replace("{0}", title)
 
 outTmpTxt2 += tmpTxtFin
 
-replcImtTxt = outTmpTxt1+outTmpTxt2
+replcImtTxt = outTmpTxt2
 
 print("----------------------------------")
-print(outTmpTxt1+outTmpTxt2)
+print(replcImtTxt)
 print("----------------------------------")
 
-with open("src/App.js", "r", encoding="utf-8")as f:
+with open(targetFile, "r", encoding="utf-8")as f:
     appFile = f.readlines()
 
 strtReplcTag = "python mdLinks auto generator start"
@@ -77,5 +65,5 @@ for row in appFile:
 with open("src/AppBK.js", "w", encoding="utf-8")as f:
     f.writelines(appFile)
 
-with open("src/App.js", "w", encoding="utf-8")as f:
+with open(targetFile, "w", encoding="utf-8")as f:
     f.write(retFile)
