@@ -7,10 +7,11 @@ import App from "./App";
 
 // python mdLinks auto generator start
 var mdPages = [
-	["AndroidApps", "mdFiles/AndroidApps.md"],
-	["Github", "mdFiles/Github.md"],
-	["Introduction", "mdFiles/Introduction.md"],
-	["PageInfo", "mdFiles/PageInfo.md"],
+["AndroidApps", "mdFiles/AndroidApps.md"],
+["Github", "mdFiles/Github.md"],
+["このページの紹介", "mdFiles/このページの紹介.md"],
+["ポートフォリオ", "mdFiles/ポートフォリオ.md"],
+["自己紹介", "mdFiles/自己紹介.md"],
 ];
 // python mdLinks auto generator end
 
