@@ -1,12 +1,13 @@
 import React from "react";
 import ReactMarkdown from "react-markdown";
+import "./App.css";
 
 function App(props) {
 	return (
 		<div>
 			<header>
-				<div class="container text-center">
-					<div class="fh5co-navbar-brand">
+				<div className="container text-center">
+					<div className="fh5co-navbar-brand">
 						<a
 							className="fh5co-logo"
 							href="http://ichir0roie.com/introduction/"
@@ -19,9 +20,9 @@ function App(props) {
 					</nav>
 				</div>
 			</header>
-			<body>
+			<div className="Md-content">
 				<ReactMarkdown>{props.mdText}</ReactMarkdown>
-			</body>
+			</div>
 		</div>
 	);
 }
