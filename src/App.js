@@ -23,6 +23,15 @@ function App(props) {
 			<div className="Md-content">
 				<ReactMarkdown>{props.mdText}</ReactMarkdown>
 			</div>
+			<footer>
+				
+			<div className="container text-center">
+				
+					<nav id="fh5co-main-nav" role="navigation">
+						<ul>{props.ElemLis}</ul>
+					</nav>
+				</div>
+			</footer>
 		</div>
 	);
 }
