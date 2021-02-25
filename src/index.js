@@ -7,13 +7,13 @@ import App from "./App";
 
 // python mdLinks auto generator start
 var mdPages = [
-["Github", "mdFiles/Github.md"],
-["このページの紹介", "mdFiles/このページの紹介.md"],
-["ホーム", "mdFiles/ホーム.md"],
-["ポートフォリオ", "mdFiles/ポートフォリオ.md"],
-["経歴", "mdFiles/経歴.md"],
-["自己紹介", "mdFiles/自己紹介.md"],
-["食費計算アプリの紹介", "mdFiles/食費計算アプリの紹介.md"],
+	["ホーム", "mdFiles/ホーム.md"],
+	["自己紹介", "mdFiles/自己紹介.md"],
+	["ポートフォリオ", "mdFiles/ポートフォリオ.md"],
+	["このページの紹介", "mdFiles/このページの紹介.md"],
+	["食費計算アプリの紹介", "mdFiles/食費計算アプリの紹介.md"],
+	["経歴", "mdFiles/経歴.md"],
+	["Github", "mdFiles/Github.md"],
 ];
 // python mdLinks auto generator end
 
@@ -21,7 +21,7 @@ var ElemLis = mdPages.map((page) => (
 	<button onClick={() => feachMd(page[1])}>{page[0]}</button>
 ));
 
-var mdText = feachMd(mdPages[2][1]);
+var mdText = feachMd(mdPages[0][1]);
 function feachMd(url) {
 	fetch(url).then(function (response) {
 		response.text().then(function (text) {
